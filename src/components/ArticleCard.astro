@@ -1,8 +1,12 @@
 ---
-const { article } = Astro.props;
-// TODO: Tipar article
-
 import { formatDate } from "@/utils/index";
+import type { CollectionEntry } from "astro:content";
+
+const { article } = Astro.props;
+
+interface Props {
+  article: CollectionEntry<"blog">;
+}
 ---
 
 <div class="max-w-md mx-auto mt-10">

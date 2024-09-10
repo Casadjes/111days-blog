@@ -1,6 +1,6 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-import Article from "@/components/Article.astro";
+import ArticleCard from "@/components/ArticleCard.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
@@ -15,7 +15,7 @@ const allBlogArticles: CollectionEntry<"blog">[] = (await getCollection("blog"))
   <h1 class="text-2xl pb-3">All Articles</h1>
   <!-- Main Grid -->
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    {allBlogArticles.map((article) => <Article article={article} />)}
+    {allBlogArticles.map((article) => <ArticleCard article={article} />)}
   </div>
 
   <!-- Pagination -->
