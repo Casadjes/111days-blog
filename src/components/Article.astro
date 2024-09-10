@@ -1,6 +1,8 @@
 ---
 const { article } = Astro.props;
 // TODO: Tipar article
+
+import { formatDate } from "@/utils/index";
 ---
 
 <div class="max-w-md mx-auto mt-10">
@@ -16,7 +18,7 @@ const { article } = Astro.props;
       <h2 class="text-2xl font-semibold mb-2">
         <a href={"/articles/" + article.slug}>{article.data.title}</a>
       </h2>
-      <p class="text-gray-600 text-sm mb-4">{article.data.pubDate}</p>
+      <p class="text-gray-600 text-sm mb-4">{formatDate(article.data.pubDate)}</p>
       <div class="flex flex-wrap gap-2">
         {
           article.data.tags.map((tag: string, index: number) => (
