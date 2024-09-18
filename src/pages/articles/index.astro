@@ -30,5 +30,10 @@ const articlesForPage: CollectionEntry<"blog">[] = allBlogArticles.slice(
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
     {articlesForPage.map((article) => <ArticleCard article={article} />)}
   </div>
-  <Pagination currentPage={currentPage} totalPages={totalPages} />
+  <Pagination
+    currentPage={currentPage}
+    totalPages={totalPages}
+    disablePrevious={currentPage === 1}
+    disableNext={currentPage === totalPages}
+  />
 </MainLayout>
