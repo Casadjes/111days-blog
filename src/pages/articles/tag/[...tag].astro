@@ -1,6 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
+import Button from "@/components/Button.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
@@ -19,9 +20,7 @@ const tagArticles = allBlogArticles.filter((article) => article.data.tags.includ
 ---
 
 <MainLayout>
-  <a href="/articles" class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white"
-    >Back To Articles</a
-  >
+  <Button text="Regresar a los artículos" route="/articles" />
   <h1 class="text-2xl pb-3 capitalize">#{tag}</h1>
   <!-- Main Grid -->
   <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

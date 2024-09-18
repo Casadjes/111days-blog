@@ -1,6 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import Tags from "@/components/Tags.astro";
+import Button from "@/components/Button.astro";
 import { formatDate } from "@/utils";
 import { getEntry } from "astro:content";
 
@@ -21,9 +22,7 @@ const { Content } = await entry.render();
 ---
 
 <MainLayout>
-  <a href="/articles" class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white"
-    >Back To Articles</a
-  >
+  <Button text="Regresar a los artículos" route="/articles" />
   <article class="max-w-3xl mx-auto">
     <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
     <h3 class="text-lg mb-2">Written by {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
