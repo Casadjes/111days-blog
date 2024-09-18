@@ -18,10 +18,10 @@ const otherArticles: CollectionEntry<"blog">[] = allBlogArticles.slice(1);
 
 <MainLayout title="Articulos">
   <!-- Top Grid -->
-  <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-    <div>
-      <h1 class="text-5xl font-bold mt-4 mb-8 leading-tight xl:text-6xl">
-        Articles, Stories & Tutorials for Tech People
+  <div class="grid grid-cols-1 gap-5 min-[850px]:grid-cols-2">
+    <div class="flex flex-col justify-between gap-7 pt-10">
+      <h1 class="text-3xl min-[550px]:text-5xl lg:text-6xl font-bold leading-tight text-balance">
+        Artículos y Guías para Amantes de la Tecnología
       </h1>
 
       <SearchForm />

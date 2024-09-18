@@ -8,17 +8,19 @@ const uniqueTags: string[] = [...new Set(tags)];
 ---
 
 <footer class="bg-indigo-900 text-white">
-  <div class="container mx-auto mt-10 max-w-screen-xl px-8">
-    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">About</h3>
-        <p class="text-white text-sm">
-          TechPeople is a blog for tech enthusiasts. We publish articles, stories and tutorials
-          about the latest technology trends and advancements.
+  <div class="container mx-auto mt-10 max-w-screen-xl px-8 py-10">
+    <div class="grid grid-cols-1 gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <h3 class="text-3xl sm:text-xl font-semibold mb-4">
+          RetoDe<span class="">111</span>Días
+        </h3>
+        <p class="text-white text-sm md:text-base text-balance">
+          Únete a mi reto de 111 días aprendiendo y compartiendo conocimientos sobre desarrollo web
+          y tecnología.
         </p>
       </div>
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">Categories</h3>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Categorías</h3>
         <ul class="text-white text-sm">
           {
             uniqueTags.map((tag) => (
@@ -31,8 +33,8 @@ const uniqueTags: string[] = [...new Set(tags)];
           }
         </ul>
       </div>
-      <div class="mt-10">
-        <h3 class="text-xl font-semibold mb-4">Contact</h3>
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Contacto</h3>
         <ul class="text-white text-sm">
           <li>
             <a href="mailto:zKu9A@example.com">Email</a>
