@@ -1,14 +1,22 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
-
+type TagsCount = {
+  [key: string]: number;
+};
 const allBlogArticles: CollectionEntry<"blog">[] = await getCollection("blog");
 const tags: string[] = allBlogArticles.flatMap((article) => article.data.tags);
 
+const tagsCount: TagsCount = tags.reduce((acc: TagsCount, tag: string) => {
+  acc[tag] = (acc[tag] || 0) + 1;
+  return acc;
+}, {} as TagsCount);
+
+console.log(tagsCount);
 const uniqueTags: string[] = [...new Set(tags)];
 ---
 
-<footer class="bg-indigo-900 text-white">
-  <div class="container mx-auto mt-10 max-w-screen-xl px-8 py-10">
+<footer class="w-full h-auto bg-indigo-900 text-white">
+  <section class="mx-auto py-10 max-w-screen-xl">
     <div class="grid grid-cols-1 gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-4">
       <div>
         <h3 class="text-3xl sm:text-xl font-semibold mb-4">
@@ -21,12 +29,14 @@ const uniqueTags: string[] = [...new Set(tags)];
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-4">Categorías</h3>
-        <ul class="text-white text-sm">
+        <ul class="flex flex-col gap-1 text-sm">
           {
             uniqueTags.map((tag) => (
-              <li class="mb-2">
-                <a class="capitalize" href={"/articles/tag/" + tag}>
-                  #{tag}
+              <li class="py-2 w-max ">
+                <a
+                  href={`/articles/tag/${tag}`}
+                  class="px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors">
+                  &#35;{tag} <span class="text-blue-300">(&nbsp;{tagsCount[tag]}&nbsp;)</span>
                 </a>
               </li>
             ))
@@ -35,18 +45,29 @@ const uniqueTags: string[] = [...new Set(tags)];
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-4">Contacto</h3>
-        <ul class="text-white text-sm">
+        <ul class="flex flex-col gap-1 text-sm [&>li]:py-2 [&>li]:w-max">
           <li>
-            <a href="mailto:zKu9A@example.com">Email</a>
+            <a
+              class="px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors"
+              href="mailto:zKu9A@example.com">Email</a
+            >
           </li>
           <li>
-            <a href="https://github.com/Casadjes" target="_blank">GitHub</a>
+            <a
+              class="px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors"
+              href="https://github.com/Casadjes"
+              target="_blank">GitHub</a
+            >
           </li>
           <li>
-            <a href="https://twitter.com/example" target="_blank">Intagram</a>
+            <a
+              class="px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors"
+              href="https://twitter.com/example"
+              target="_blank">Instagram</a
+            >
           </li>
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </footer>
