@@ -1,10 +1,10 @@
 ---
 title: "title1"
-pubDate: 2024-01-20
+pubDate: 2024-08-30
 author: "John Doe"
-image: "astro.png"
+image: "zustand.png"
 tags: ["tag1", "tag2"]
-slug: slug-example-developer4
+slug: slug-example-developer8
 ---
 
 # Celulares Inteligentes
