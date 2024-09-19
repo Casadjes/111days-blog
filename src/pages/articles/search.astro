@@ -2,6 +2,7 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
 import SearchForm from "@/components/SearchForm.astro";
+import Button from "@/components/Button.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 
 const query: string | null = Astro.url.searchParams.get("query");
@@ -24,9 +25,7 @@ const searResults = allBlogArticles.filter((article) => {
 ---
 
 <MainLayout title="Search Results">
-  <a href="/articles" class="inline-block bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white"
-    >All Articles</a
-  >
+  <Button text="Regresar a los artículos" route="/articles" />
   <SearchForm />
   <br />
   <h1 class="text-2xl pb-3 mt-6">Results For <strong>{query}</strong></h1>
