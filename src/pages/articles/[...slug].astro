@@ -25,15 +25,33 @@ const { Content } = await entry.render();
   <Button text="Regresar a los artículos" route="/articles" />
   <article class="max-w-3xl mx-auto">
     <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
-    <h3 class="text-lg mb-2">Written by {entry.data.author} on {formatDate(entry.data.pubDate)}</h3>
+    <h2 class="text-lg mb-2">Written by {entry.data.author} on {formatDate(entry.data.pubDate)}</h2>
     <div class="flex flex-wrap gap-2 mb-6">
       <Tags tags={entry.data.tags} />
     </div>
     <img
-      src={"/images/" + entry.data.image}
-      alt="Article Image"
+      src={`/images/${entry.data.image}.avif`}
+      srcset={`
+    /images/${entry.data.image}.avif 326w,  
+    /images/${entry.data.image}.avif 576w,
+    /images/${entry.data.image}.avif 704w,
+    /images/${entry.data.image}.avif 768w
+    `}
+      sizes="
+    (max-width: 390px) 326w, 
+    (max-width: 640px) 576px,
+    (max-width: 768px) 704px,
+    (max-width: 1024px) 768px,
+    768px
+    "
+      alt="imagen del articulo"
       class="w-full h-auto rounded-xl mb-6"
+      loading="eager"
+      decoding="async"
+      width="768"
+      height="432"
     />
+
     <Content />
   </article>
 </MainLayout>

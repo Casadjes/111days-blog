@@ -2,7 +2,7 @@
 title: "title1"
 pubDate: 2024-01-20
 author: "John Doe"
-image: "javascript.png"
+image: "javascript"
 tags: ["tag1", "tag2"]
 slug: slug-example-developer1
 ---
