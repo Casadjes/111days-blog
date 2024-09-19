@@ -21,7 +21,7 @@ if (!entry) {
 const { Content } = await entry.render();
 ---
 
-<MainLayout>
+<MainLayout title={entry.data.title}>
   <Button text="Regresar a los artículos" route="/articles" />
   <article class="max-w-3xl mx-auto">
     <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
@@ -29,7 +29,11 @@ const { Content } = await entry.render();
     <div class="flex flex-wrap gap-2 mb-6">
       <Tags tags={entry.data.tags} />
     </div>
-    <img src={entry.data.image} alt="Article Image" class="w-full h-auto rounded-xl mb-6" />
+    <img
+      src={"/images/" + entry.data.image}
+      alt="Article Image"
+      class="w-full h-auto rounded-xl mb-6"
+    />
     <Content />
   </article>
 </MainLayout>
