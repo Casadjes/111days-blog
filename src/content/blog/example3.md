@@ -3,7 +3,7 @@ title: "title1"
 pubDate: 2024-01-20
 author: "John Doe"
 image: "react"
-tags: ["tag1", "tag2"]
+tags: ["javascript"]
 slug: slug-example-developer3
 ---
 
