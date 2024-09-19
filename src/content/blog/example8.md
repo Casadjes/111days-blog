@@ -3,7 +3,7 @@ title: "title1"
 pubDate: 2024-08-30
 author: "John Doe"
 image: "zustand"
-tags: ["tag1", "tag2"]
+tags: ["astro"]
 slug: slug-example-developer8
 ---
 

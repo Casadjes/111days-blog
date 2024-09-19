@@ -3,7 +3,7 @@ title: "title1"
 pubDate: 2024-01-20
 author: "John Doe"
 image: "javascript"
-tags: ["tag1", "tag2"]
+tags: ["javascript"]
 slug: slug-example-developer1
 ---
 
@@ -51,3 +51,16 @@ Entre las desventajas se encuentran:
 ## Conclusi n
 
 Los celulares inteligentes son dispositivos electronicos muy versatiles que ofrecen una gran cantidad de caracteristicas y aplicaciones. Sin embargo, tambien pueden tener desventajas como la dependencia y la falta de seguridad y privacidad.
+
+```javascript
+// Esta función suma dos números
+function sumar(a, b) {
+  return a + b;
+}
+
+// Llamada a la función y almacenamiento del resultado
+const resultado = sumar(3, 4);
+
+// Mostrar el resultado en la consola
+console.log(`El resultado es: ${resultado}`);
+```
