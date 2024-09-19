@@ -2,7 +2,7 @@
 title: "title1"
 pubDate: 2024-08-30
 author: "John Doe"
-image: "tanstack.png"
+image: "tanstack"
 tags: ["tag1", "tag2"]
 slug: slug-example-developer7
 ---

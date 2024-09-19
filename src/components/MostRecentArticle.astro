@@ -10,11 +10,28 @@ interface Props {
 ---
 
 <div class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl">
-  <a href={"/articles/" + article.slug}>
+  <a href={`/articles/${article.slug}`}>
     <img
-      src={"/images/" + article.data.image}
-      alt="Article Image"
-      class="size-full object-cover object-center rounded-2xl"
+      src={`/images/${article.data.image}.avif`}
+      srcset={`
+    /images/${article.data.image}.avif 326w,  
+    /images/${article.data.image}.avif 576w,
+    /images/${article.data.image}.avif 704w,
+    /images/${article.data.image}.avif 470w
+    `}
+      sizes="
+    (max-width: 390px) 326px,
+    (max-width: 640px) 576px,
+    (max-width: 768px) 704px,
+    (max-width: 1024px) 470px,
+    598px
+    "
+      alt="imagen del articulo"
+      class="size-full object-cover object-center rounded-xl mb-6"
+      loading="eager"
+      decoding="async"
+      width="598"
+      height="360"
     />
 
     <div
