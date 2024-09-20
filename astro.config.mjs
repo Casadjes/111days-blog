@@ -10,4 +10,12 @@ export default defineConfig({
   integrations: [tailwind()],
   output: "server",
   adapter: vercel(),
+
+  markdown: {
+    shikiConfig: {
+      theme: "dracula-soft",
+      langs: [],
+      wrap: true,
+    },
+  },
 });

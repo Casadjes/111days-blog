@@ -1,5 +1,6 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
+import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import Tags from "@/components/Tags.astro";
 import Button from "@/components/Button.astro";
 import { formatDate } from "@/utils";
@@ -52,11 +53,16 @@ const { Content } = await entry.render();
       height="432"
     />
 
-    <Content />
+    <ArticleLayout>
+      <Content />
+    </ArticleLayout>
   </article>
 </MainLayout>
 
-<style is:global>
+<!-- <style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
   p {
     margin: 20px 0;
   }
@@ -64,4 +70,8 @@ const { Content } = await entry.render();
     margin: 20px 0;
     font-size: 1.8rem;
   }
-</style>
+  pre {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+</style> -->

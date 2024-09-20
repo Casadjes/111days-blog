@@ -7,7 +7,9 @@ tags: ["javascript"]
 slug: slug-example-developer1
 ---
 
-# Celulares Inteligentes
+## Celulares Inteligentes
+
+### soy un subtitulo h3
 
 Los celulares inteligentes, tambien conocidos como smartphones, son dispositivos electronicos que integran las funcionalidades de un telefono movil con las de un computadora personal. Estos dispositivos suelen tener una pantalla tactil, conectividad a redes inalambricas y capacidad para ejecutar aplicaciones.
 
@@ -48,7 +50,7 @@ Entre las desventajas se encuentran:
 - Seguridad: Los celulares inteligentes pueden ser vulnerables a ataques de seguridad.
 - Privacidad: Los celulares inteligentes pueden recopilar informacion personal del usuario.
 
-## Conclusi n
+## Conclusion
 
 Los celulares inteligentes son dispositivos electronicos muy versatiles que ofrecen una gran cantidad de caracteristicas y aplicaciones. Sin embargo, tambien pueden tener desventajas como la dependencia y la falta de seguridad y privacidad.
 
