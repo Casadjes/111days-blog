@@ -35,7 +35,7 @@ const uniqueTags: string[] = [...new Set(tags)];
                 <a
                   href={`/articles/tag/${tag}`}
                   class="px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors capitalize">
-                  &#35;&nbsp;{tag} <span class="text-blue-300">(&nbsp;{tagsCount[tag]}&nbsp;)</span>
+                  &#35;{tag} <span class="text-blue-300">(&nbsp;{tagsCount[tag]}&nbsp;)</span>
                 </a>
               </li>
             ))
