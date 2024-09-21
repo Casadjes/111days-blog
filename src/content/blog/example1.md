@@ -1,68 +1,59 @@
 ---
-title: "title1"
-pubDate: 2024-01-20
+title: "Arrow Functions en ES6"
+pubDate: 2024-09-20
 author: "John Doe"
 image: "javascript"
 tags: ["javascript"]
 slug: slug-example-developer1
 ---
 
-## Celulares Inteligentes
+Las **Arrow Functions** son una de las características más útiles introducidas en ECMAScript 6 (ES6). Proporcionan una sintaxis más corta para escribir funciones y tienen un comportamiento léxico para el contexto `this`.
 
-### soy un subtitulo h3
+## Sintaxis
 
-Los celulares inteligentes, tambien conocidos como smartphones, son dispositivos electronicos que integran las funcionalidades de un telefono movil con las de un computadora personal. Estos dispositivos suelen tener una pantalla tactil, conectividad a redes inalambricas y capacidad para ejecutar aplicaciones.
-
-## Caracteristicas
-
-Entre las caracteristicas de los celulares inteligentes se encuentran:
-
-- Pantalla tactil: Permite interactuar con el dispositivo mediante el tacto.
-- Conectividad: Permite conectarse a redes inalambricas como Wi-Fi o redes moviles.
-- Procesador: Es el encargado de ejecutar las aplicaciones y realizar las tareas del dispositivo.
-- Memoria RAM: Almacena los datos temporalmente mientras se ejecutan las aplicaciones.
-- Memoria Interna: Almacena los datos permanentemente.
-- Camara: Permite tomar fotos y videos.
-- GPS: Permite localizar el dispositivo en un mapa.
-- Sensores: Permite medir la orientacion del dispositivo, la luminosidad, el movimiento, entre otros.
-- Aplicaciones: Los celulares inteligentes pueden ejecutar aplicaciones de terceros, como juegos, aplicaciones sociales, aplicaciones de productividad, entre otros.
-
-## Tipos de Celulares Inteligentes
-
-Existen diferentes tipos de celulares inteligentes, como:
-
-- Celulares Android: Estos dispositivos utilizan el sistema operativo Android, desarrollado por Google.
-- Celulares iOS: Estos dispositivos utilizan el sistema operativo iOS, desarrollado por Apple.
-- Celulares Windows Phone: Estos dispositivos utilizan el sistema operativo Windows Phone, desarrollado por Microsoft.
-
-## Ventajas y Desventajas
-
-Entre las ventajas de los celulares inteligentes se encuentran:
-
-- Portabilidad: Son dispositivos portatiles que pueden llevarse en el bolsillo.
-- Conectividad: Permite conectarse a redes inalambricas y acceder a internet.
-- Aplicaciones: Pueden ejecutar aplicaciones de terceros.
-- GPS: Permite localizar el dispositivo en un mapa.
-
-Entre las desventajas se encuentran:
-
-- Dependencia: Los celulares inteligentes pueden generar dependencia en el usuario.
-- Seguridad: Los celulares inteligentes pueden ser vulnerables a ataques de seguridad.
-- Privacidad: Los celulares inteligentes pueden recopilar informacion personal del usuario.
-
-## Conclusion
-
-Los celulares inteligentes son dispositivos electronicos muy versatiles que ofrecen una gran cantidad de caracteristicas y aplicaciones. Sin embargo, tambien pueden tener desventajas como la dependencia y la falta de seguridad y privacidad.
+La sintaxis básica de una arrow function es la siguiente:
 
 ```javascript
-// Esta función suma dos números
-function sumar(a, b) {
+const nombreFuncion = (param1, param2) => {
+  // cuerpo de la función
+};
+```
+
+### Ejemplo
+
+Aquí hay un ejemplo simple de una arrow function que suma dos números:
+
+```javascript
+const suma = (a, b) => {
   return a + b;
+};
+
+console.log(suma(5, 3)); // Salida: 8
+```
+
+## Características
+
+**Sintaxis Concisa**: Las funciones flecha permiten escribir funciones de manera más concisa, especialmente para funciones de una sola línea.
+
+```javascript
+const suma = (a, b) => a + b;
+```
+
+**No tienen su propio** `this`: Las arrow functions no crean su propio contexto this, lo que significa que mantienen el this del contexto donde fueron definidas.
+
+```javascript
+function Persona() {
+  this.edad = 0;
+
+  setInterval(() => {
+    this.edad++; // `this` se refiere al contexto de Persona
+    console.log(this.edad);
+  }, 1000);
 }
 
-// Llamada a la función y almacenamiento del resultado
-const resultado = sumar(3, 4);
-
-// Mostrar el resultado en la consola
-console.log(`El resultado es: ${resultado}`);
+const p = new Persona(); // Esto incrementará `edad` cada segundo
 ```
+
+**No son adecuadas para métodos**: Dado que no tienen su propio `this`, no son adecuadas para métodos de objeto que requieren su propio contexto.
+
+Las arrow functions son una adición poderosa a JavaScript que simplifica la sintaxis y mejora la legibilidad del código. Son especialmente útiles en programación funcional y cuando se trabaja con métodos que requieren acceso al contexto `this`.
