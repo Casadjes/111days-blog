@@ -26,7 +26,9 @@ const { Content } = await entry.render();
   <Button text="Regresar a los artículos" route="/articles" />
   <article class="max-w-3xl mx-auto">
     <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
-    <h2 class="text-lg mb-2">Written by {entry.data.author} on {formatDate(entry.data.pubDate)}</h2>
+    <h2 class="text-lg mb-2">
+      Escrito Por {entry.data.author} el {formatDate(entry.data.pubDate)}
+    </h2>
     <div class="flex flex-wrap gap-2 mb-6">
       <Tags tags={entry.data.tags} />
     </div>
@@ -56,8 +58,8 @@ const { Content } = await entry.render();
     <ArticleLayout>
       <Content />
     </ArticleLayout>
+    <Button text="Regresar a los artículos" route="/articles" />
   </article>
-  <Button text="Regresar a los artículos" route="/articles" />
 </MainLayout>
 
 <!-- <style is:global>
