@@ -2,6 +2,7 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import Tags from "@/components/Tags.astro";
+import ScrollToTopButton from "@/components/ScrollToTopButton.astro";
 import Button from "@/components/Button.astro";
 import { formatDate } from "@/utils";
 import { getEntry } from "astro:content";
@@ -58,23 +59,6 @@ const { Content } = await entry.render();
     <ArticleLayout>
       <Content />
     </ArticleLayout>
-    <Button text="Regresar a los artículos" route="/articles" />
+    <ScrollToTopButton />
   </article>
 </MainLayout>
-
-<!-- <style is:global>
-  html {
-    scroll-behavior: smooth;
-  }
-  p {
-    margin: 20px 0;
-  }
-  h2 {
-    margin: 20px 0;
-    font-size: 1.8rem;
-  }
-  pre {
-    padding: 1rem;
-    border-radius: 0.5rem;
-  }
-</style> -->
