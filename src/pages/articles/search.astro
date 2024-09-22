@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import noResultsImage from "@/images/noresults.webp";
 import MainLayout from "@/layouts/MainLayout.astro";
 import ArticleCard from "@/components/ArticleCard.astro";
 import SearchForm from "@/components/SearchForm.astro";
@@ -11,7 +13,7 @@ const allBlogArticles: CollectionEntry<"blog">[] = await getCollection("blog");
 
 //Filter articles based on query
 
-const searResults = allBlogArticles.filter((article) => {
+const searchResults = allBlogArticles.filter((article) => {
   const titleMatch: boolean = article.data.title
     .toLocaleLowerCase()
     .includes(query!.toLocaleLowerCase());
@@ -28,8 +30,27 @@ const searResults = allBlogArticles.filter((article) => {
   <Button text="Regresar a los artículos" route="/articles" />
   <SearchForm />
   <br />
-  <h1 class="text-2xl pb-3 mt-6">Results For <strong>{query}</strong></h1>
-  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-    {searResults.map((article) => <ArticleCard article={article} />)}
-  </div>
+  <h1 class="text-2xl pb-3 mt-6">Resultados para <strong>{query}</strong></h1>
+  {
+    searchResults.length > 0 ? (
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {searchResults.map((article) => (
+          <ArticleCard article={article} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center mt-10">
+        <Image
+          src={noResultsImage}
+          alt="imagen de perrito con pistola"
+          class="mx-auto rounded-xl"
+          width={200}
+          height={200}
+        />
+        <p class="mt-4 text-lg">
+          No se encontraron resultados para <strong>"{query}"</strong>.
+        </p>
+      </div>
+    )
+  }
 </MainLayout>
