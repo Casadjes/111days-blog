@@ -35,5 +35,6 @@ const articlesForPage: CollectionEntry<"blog">[] = allBlogArticles.slice(
     totalPages={totalPages}
     disablePrevious={currentPage === 1}
     disableNext={currentPage === totalPages}
+    route="articles"
   />
 </MainLayout>

@@ -1,17 +1,18 @@
 ---
-const { currentPage, totalPages, disablePrevious, disableNext } = Astro.props;
+const { currentPage, totalPages, disablePrevious, disableNext, route } = Astro.props;
 
 interface Props {
   currentPage: number;
   totalPages: number;
   disablePrevious: boolean;
   disableNext: boolean;
+  route: string;
 }
 ---
 
 <div class="flex justify-between mt-10">
   <a
-    href={"/articles?page=" + (currentPage - 1)}
+    href={`/${route}?page=${currentPage - 1}`}
     class={disablePrevious
       ? "pointer-events-none inline-block bg-indigo-100 px-3 py-2 text-gray-400  rounded-lg"
       : "inline-block bg-indigo-200 px-3 py-2 hover:bg-indigo-300/75 rounded-lg transition-colors duration-200"}>
@@ -21,7 +22,7 @@ interface Props {
     >{currentPage} / {totalPages}</span
   >
   <a
-    href={"/articles?page=" + (currentPage + 1)}
+    href={`/${route}?page=${currentPage + 1}`}
     class={disableNext
       ? "pointer-events-none inline-block bg-indigo-100 px-3 py-2 text-gray-400  rounded-lg"
       : "inline-block bg-indigo-200 px-3 py-2 hover:bg-indigo-300/75  rounded-lg transition-colors duration-200"}>
