@@ -25,7 +25,7 @@ interface Props {
     </a>
     <div class="p-6">
       <h2 class="text-2xl font-semibold mb-2">
-        <a href={"/articles/" + article.slug}>{article.data.title}</a>
+        <a href={`/articles/${article.slug}`}>{article.data.title}</a>
       </h2>
       <p class="text-gray-600 text-sm mb-4">{formatDate(article.data.pubDate)}</p>
       <Tags tags={article.data.tags} />
