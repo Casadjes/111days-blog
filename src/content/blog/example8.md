@@ -2,8 +2,8 @@
 title: "title1"
 pubDate: 2024-08-30
 author: "John Doe"
-image: "zustand"
-tags: ["astro"]
+image: "javascript"
+tags: ["javascript"]
 slug: slug-example-developer8
 ---
 

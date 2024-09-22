@@ -2,8 +2,8 @@
 title: "title1"
 pubDate: 2024-01-20
 author: "John Doe"
-image: "zod"
-tags: ["react"]
+image: "javascript"
+tags: ["javascript"]
 slug: slug-example-developer6
 ---
 
