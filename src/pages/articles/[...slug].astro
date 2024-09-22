@@ -26,7 +26,9 @@ const { Content } = await entry.render();
 <MainLayout title={entry.data.title}>
   <Button text="Regresar a los artículos" route="/articles" />
   <article class="max-w-3xl mx-auto">
-    <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
+    <h1 class="max-[450px]:text-3xl text-4xl font-bold mb-2 text-balance">
+      {entry.data.title}
+    </h1>
     <h2 class="text-lg mb-2">
       Escrito Por {entry.data.author} el {formatDate(entry.data.pubDate)}
     </h2>
@@ -42,12 +44,12 @@ const { Content } = await entry.render();
     /images/${entry.data.image}.avif 768w
     `}
       sizes="
-    (max-width: 390px) 326w, 
-    (max-width: 640px) 576px,
-    (max-width: 768px) 704px,
-    (max-width: 1024px) 768px,
-    768px
-    "
+      (max-width: 390px) 326w, 
+      (max-width: 640px) 576px,
+      (max-width: 768px) 704px,
+      (max-width: 1024px) 768px,
+      768px
+      "
       alt="imagen del articulo"
       class="w-full h-auto rounded-xl mb-6"
       loading="eager"
