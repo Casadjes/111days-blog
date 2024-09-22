@@ -1,6 +1,6 @@
 ---
 title: "Arrow Functions en ES6"
-pubDate: 2024-09-20
+pubDate: 2024-09-25
 author: "John Doe"
 image: "javascript"
 tags: ["javascript"]
