@@ -1,10 +1,10 @@
 ---
-title: "title1"
-pubDate: 2024-01-20
+title: "var, let y const, cual es la diferencia?"
+pubDate: 2024-01-26
 author: "John Doe"
 image: "javascript"
 tags: ["javascript"]
-slug: slug-example-developer2
+slug: slug-example-developer7
 ---
 
 # Celulares Inteligentes

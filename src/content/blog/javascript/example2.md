@@ -1,10 +1,10 @@
 ---
-title: "title1"
-pubDate: 2024-08-30
+title: "Que es el Hoisting y como funciona?"
+pubDate: 2024-01-20
 author: "John Doe"
 image: "javascript"
 tags: ["javascript"]
-slug: slug-example-developer7
+slug: slug-example-developer2
 ---
 
 # Celulares Inteligentes

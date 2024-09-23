@@ -1,10 +1,10 @@
 ---
-title: "title1"
-pubDate: 2024-01-20
+title: "Interesantes datos sobre los los tipos en Typescript"
+pubDate: 2024-12-31
 author: "John Doe"
-image: "javascript"
-tags: ["javascript"]
-slug: slug-example-developer6
+image: "typescript"
+tags: ["typescript"]
+slug: slug-example-developer3
 ---
 
 # Celulares Inteligentes

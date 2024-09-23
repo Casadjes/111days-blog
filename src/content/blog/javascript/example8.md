@@ -1,10 +1,10 @@
 ---
-title: "title1"
-pubDate: 2024-01-20
+title: "FlatMap, como funciona?"
+pubDate: 2024-05-12
 author: "John Doe"
 image: "javascript"
 tags: ["javascript"]
-slug: slug-example-developer4
+slug: slug-example-developer8
 ---
 
 # Celulares Inteligentes

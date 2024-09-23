@@ -1,10 +1,10 @@
 ---
-title: "title1"
+title: "Introduccion a UseState pal"
 pubDate: 2024-01-20
 author: "John Doe"
 image: "react"
-tags: ["javascript"]
-slug: slug-example-developer3
+tags: ["react"]
+slug: slug-example-developer6
 ---
 
 # Celulares Inteligentes
