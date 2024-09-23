@@ -4,17 +4,27 @@ const { tags } = Astro.props;
 interface Props {
   tags: string[];
 }
+
+// Map of tags to their corresponding colors
+const tagColors: Record<string, string> = {
+  javascript: "bg-yellow-300 text-black", // JavaScript
+  typescript: "bg-blue-500 text-white", // TypeScript
+  react: "bg-cyan-300 text-black", // React
+  astro: "bg-orange-500 text-white", // Astro
+  zustand: "bg-yellow-900 text-white", // Zustand
+  tanstack: "bg-red-600 text-white", // TanStack Query
+  zod: "bg-blue-800 text-white", // Zod
+  // Add more tags and colors as needed
+};
+// Default color if tag is not found in the map
+const defaultColor = "bg-gray-500";
 ---
 
 <div class="flex flex-wrap gap-2">
   {
-    tags.map((tag: string, index: number) => (
+    tags.map((tag: string) => (
       <span
-        class={
-          index % 2 === 0
-            ? "px-2 py-1 bg-purple-500 text-white rounded-full text-xs hover:opacity-90"
-            : "px-2 py-1 bg-indigo-500 text-white rounded-full text-xs hover:opacity-90"
-        }>
+        class={`px-2 py-1 ${tagColors[tag] || defaultColor} rounded-full text-xs hover:opacity-90`}>
         <a class="capitalize" href={"/articles/tag/" + tag}>
           #{tag}
         </a>
