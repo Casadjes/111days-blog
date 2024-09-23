@@ -1,10 +1,10 @@
 ---
-title: "title1"
-pubDate: 2024-08-30
+title: "UseEffect, es tan util como dicen? palabra palabra pla"
+pubDate: 2024-01-20
 author: "John Doe"
-image: "javascript"
-tags: ["javascript"]
-slug: slug-example-developer8
+image: "react"
+tags: ["react"]
+slug: slug-example-developer5
 ---
 
 # Celulares Inteligentes

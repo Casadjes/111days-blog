@@ -1,10 +1,10 @@
 ---
-title: "title1"
-pubDate: 2024-01-20
+title: "types vs interface, cual debo usar?"
+pubDate: 2024-09-09
 author: "John Doe"
-image: "javascript"
-tags: ["javascript"]
-slug: slug-example-developer5
+image: "typescript"
+tags: ["typescript"]
+slug: slug-example-developer4
 ---
 
 # Celulares Inteligentes
