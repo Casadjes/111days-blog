@@ -5,5 +5,5 @@ export function formatDate(date: Date) {
     day: "numeric",
   };
 
-  return new Date(date).toLocaleDateString(undefined, options);
+  return new Date(date).toLocaleDateString("es-ES", options);
 }
