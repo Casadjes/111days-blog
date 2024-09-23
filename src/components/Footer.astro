@@ -29,10 +29,10 @@ const uniqueTags: string[] = [...new Set(tags)];
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-4">Categorías</h3>
-        <ul class="flex flex-wrap gap-2 text-sm">
+        <ul class="flex flex-wrap gap-x-2 gap-y-5 text-sm">
           {
             uniqueTags.map((tag) => (
-              <li class="py-2 w-max ">
+              <li class="w-max ">
                 <a
                   href={`/articles/tag/${tag}`}
                   class="px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors capitalize">
