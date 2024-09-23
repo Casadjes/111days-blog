@@ -1,9 +1,41 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import Button from "@/components/Button.astro";
+
+const currentDay: number = 1;
 ---
 
 <MainLayout title="Acerca del reto">
   <Button text="Regresar al Inicio" route="/" />
-  <h1 class="text-2xl">pagina explicativa</h1>
+  <div class="max-w-3xl mx-auto mt-10 p-8 bg-gray-100 rounded-lg shadow-md">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">
+      Reto de 111 Días de Programación
+    </h2>
+
+    <p class="text-center text-gray-600 mb-8">
+      Me he propuesto mejorar mis habilidades de programación durante 111 días consecutivos. Aquí
+      comparto mi progreso y aprendizajes.
+    </p>
+
+    <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+      <h3 class="text-xl font-semibold mb-4 text-gray-700">Objetivos del Reto:</h3>
+      <ul class="min-[450px]:list-disc list-inside space-y-5 min-[450px]:space-y-3 text-gray-600">
+        <li>Programar al menos 1 hora cada día</li>
+        <li>Aprender una nueva tecnología o concepto cada semana</li>
+        <li>Compartir mi progreso diariamente en este blog</li>
+        <li>Completar un proyecto personal al final del reto</li>
+      </ul>
+    </div>
+
+    <div class="flex justify-center items-center space-x-4 mb-8">
+      <span class="text-5xl font-bold text-indigo-500">{currentDay}</span>
+      <span class="text-2xl text-gray-600">/ 111 días</span>
+    </div>
+
+    <button
+      id="compartir"
+      class="block mx-auto px-6 py-3 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+      Comparte mi reto
+    </button>
+  </div>
 </MainLayout>
