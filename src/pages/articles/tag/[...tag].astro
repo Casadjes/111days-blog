@@ -19,9 +19,16 @@ const allBlogArticles: CollectionEntry<"blog">[] = (await getCollection("blog"))
   (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
     b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-const tagArticles = allBlogArticles.filter((article) => article.data.tags.includes(tag));
 
-const totalPages: number = Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE);
+// filter
+const tagArticles = allBlogArticles.filter((article) => article.data.tags.includes(tag));
+console.log(4 / 6);
+
+// Calculate the total number of pages based on the filtered articles (tagArticles).
+// If there are no articles, set totalPages to 1 to avoid showing extra pagination.
+// Math.ceil() is used to round up the number of pages, ensuring all articles are displayed.
+const totalPages: number =
+  tagArticles.length === 0 ? 1 : Math.ceil(tagArticles.length / ARTICLES_PER_PAGE);
 
 const articlesForPage: CollectionEntry<"blog">[] = tagArticles.slice(
   (currentPage - 1) * ARTICLES_PER_PAGE,
