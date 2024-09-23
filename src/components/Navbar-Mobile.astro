@@ -1,9 +1,9 @@
-<header x-data="{ open: false }" class="text-white p-2 w-full bg-gray-900 md:hidden">
+<header x-data="{ open: false }" class="text-white p-2 w-full bg-gray-900 md:hidden relative">
   <div class="w-full flex justify-between items-center p-2">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap"
-        >RetoDe<span class="text-indigo-400">111</span>Días</span
-      >
+      <span class="self-center text-2xl font-semibold whitespace-nowrap">
+        RetoDe<span class="text-indigo-400">111</span>Días
+      </span>
     </a>
     <button @click="open = !open" class="p-2 rounded">
       <svg
@@ -21,14 +21,14 @@
       </svg>
     </button>
   </div>
-  <nav x-show="open" x-transition class="min-h-[150px]">
+  <nav x-show="open" x-transition class="absolute top-full left-0 w-full bg-gray-800 z-10">
     <ul
-      class="w-full flex flex-col gap-1 p-2 rounded shadow-md [&>li>a]:block [&>li]:transition-colors font">
+      class="flex flex-col gap-1 p-2 rounded shadow-md [&>li>a]:block [&>li]:transition-colors font">
       <li class="border-b-2 border-b-transparent hover:border-b-indigo-400 p-2">
         <a href="/" aria-current="page">Inicio</a>
       </li>
       <li class="border-b-2 border-b-transparent hover:border-b-indigo-400 p-2">
-        <a href="/articles">Articulos</a>
+        <a href="/articles">Artículos</a>
       </li>
       <li class="border-b-2 border-b-transparent hover:border-b-indigo-400 p-2">
         <a href="/about">Acerca del reto</a>
