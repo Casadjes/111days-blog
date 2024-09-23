@@ -1,5 +1,17 @@
-# Reto de Programación de 111 días
----
+# Reto de 111 Días de Programación
+Este repositorio documenta mi Reto de 111 Días de Programación, un viaje de aprendizaje intensivo donde me enfocaré en dominar tecnologías clave del desarrollo web, con el objetivo de integrar todas las habilidades adquiridas en un proyecto final.
+
+## Objetivos
+- **Dominar Tecnologías Esenciales**: Durante este reto, profundizaré en las tecnologías más demandadas para el desarrollo web moderno, como React, Astro, TypeScript, Zustand, TanStack Query, y Zod.
+
+- **Aplicar Principios de Código Limpio**: Practicaré la implementación de principios de clean code, patrones de diseño en React, y mejores prácticas para optimización web.
+
+- **Desarrollar Habilidades en Testing**: Incorporaré testing en las diferentes etapas del reto para asegurar la calidad y funcionalidad del código, utilizando frameworks adecuados para cada tecnología.
+
+- **Optimización y Buenas Prácticas**: Implementaré técnicas de optimización como data fetching, manejo eficiente de localStorage, asincronía, y estrategias avanzadas de autenticación y manejo de tokens.
+
+- **Crear un Proyecto Final Completo**: Al final del reto, construiré un proyecto completo que integre todas las tecnologías aprendidas. 
+# Inicio del reto
 
 ### **Semana 1-2: Fundamentos de ES6+ y TypeScript**
 - **Día 1-3:** Introducción a ES6+
