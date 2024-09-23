@@ -1,5 +1,6 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
+import FooterListItem from "./FooterListItem.astro";
 type TagsCount = {
   [key: string]: number;
 };
@@ -28,7 +29,7 @@ const uniqueTags: string[] = [...new Set(tags)];
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-4">Categorías</h3>
-        <ul class="flex flex-col gap-1 text-sm">
+        <ul class="flex flex-wrap gap-2 text-sm">
           {
             uniqueTags.map((tag) => (
               <li class="py-2 w-max ">
@@ -44,27 +45,27 @@ const uniqueTags: string[] = [...new Set(tags)];
       </div>
       <div>
         <h3 class="text-xl font-semibold mb-4">Contacto</h3>
-        <ul class="flex flex-col gap-1 text-sm [&>li]:py-2 [&>li]:w-max">
-          <li>
-            <a
-              class="px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors"
-              href="mailto:zKu9A@example.com">Email</a
-            >
-          </li>
-          <li>
-            <a
-              class="px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors"
-              href="https://github.com/Casadjes"
-              target="_blank">GitHub</a
-            >
-          </li>
-          <li>
-            <a
-              class="px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors"
-              href="https://twitter.com/example"
-              target="_blank">Instagram</a
-            >
-          </li>
+        <ul class="flex flex-col gap-2 text-sm">
+          <FooterListItem
+            href="https://www.linkedin.com/in/jesus-e-casado-67a725279/"
+            text="LinkedIn"
+            imagePath="/images/icons/linkedIn.svg"
+          />
+          <FooterListItem
+            href="mailto:esmilcasado901@gmail.com"
+            text="Email"
+            imagePath="/images/icons/email.svg"
+          />
+          <FooterListItem
+            href="https://github.com/Casadjes"
+            text="Github"
+            imagePath="/images/icons/github.svg"
+          />
+          <FooterListItem
+            href="https://www.instagram.com/casadjes_901/?hl=es"
+            text="Instagram"
+            imagePath="/images/icons/instagram.svg"
+          />
         </ul>
       </div>
     </div>

@@ -1,0 +1,19 @@
+---
+const { text, imagePath, href } = Astro.props;
+
+interface Props {
+  href: string;
+  text: string;
+  imagePath: string;
+}
+---
+
+<li class="rounded-md transition-colors w-max text-sm">
+  <a
+    href={href}
+    target="_blank"
+    class="flex items-center gap-2 px-4 py-2 bg-gray-900/80 hover:bg-gray-900/60 rounded-md transition-colors w-full h-full">
+    <img src={imagePath} alt="icono del footer" />
+    <span>{text}</span>
+  </a>
+</li>
