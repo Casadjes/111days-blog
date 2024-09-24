@@ -1,7 +1,7 @@
 ---
 title: "Entendiendo let y const en ES6: Lo que Necesitas Saber"
-pubDate: 2024-09-25
-author: "John Doe"
+pubDate: 2024-09-24
+author: "Jesús Casado"
 image: "javascript"
 tags: ["javascript", "ES6"]
 slug: entendiendo-let-y-const-en-es6-lo-que-necesitas-saber
