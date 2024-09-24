@@ -40,13 +40,13 @@ console.log(b); // ReferenceError: b is not defined
 
 ```javascript
 const b = 30;
-// b = 40; // TypeError: Assignment to constant variable.
+b = 40; // TypeError: Assignment to constant variable.
 
 const arr = [1, 2, 3];
 arr.push(4); // Esto es válido, se modifica el contenido del array
 console.log(arr); // Salida: [1, 2, 3, 4]
 
-// arr = [5, 6]; // TypeError: Assignment to constant variable.
+arr = [5, 6]; // TypeError: Assignment to constant variable.
 ```
 
 ## Modificación de Objetos y Arrays
