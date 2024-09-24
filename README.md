@@ -11,7 +11,9 @@
 9. [Ir a Semana 17-18: Desarrollo Avanzado con Astro](#semana-17-18-desarrollo-avanzado-con-astro)
 10. [Ir a Semana 19: Proyecto Final](#semana-19-proyecto-final)
 
-Este repositorio documenta mi Reto de 111 Días de Programación, un viaje de aprendizaje intensivo donde me enfocaré en dominar tecnologías clave del desarrollo web, con el objetivo de integrar todas las habilidades adquiridas en un proyecto final.
+Este repositorio documenta mi Reto de 111 Días de Programación, un viaje de aprendizaje intensivo donde me enfocaré en dominar tecnologías clave del desarrollo web. Mi objetivo es integrar todas las habilidades adquiridas en un proyecto final.
+
+A lo largo de estos días, compartiré contenido y reflexiones sobre cada tema que aprenda. Puedes seguir todo el progreso en mi blog [aqui](https://111days-blog.vercel.app/)
 
 ## Objetivos
 - **Dominar Tecnologías Esenciales**: Durante este reto, profundizaré en las tecnologías más demandadas para el desarrollo web moderno, como React, Astro, TypeScript, Zustand, TanStack Query, y Zod.
