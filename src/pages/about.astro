@@ -2,7 +2,11 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import Button from "@/components/Button.astro";
 
-const currentDay: number = 1;
+const startDate = new Date("2024-09-24");
+const currentDate = new Date();
+const timeDifference = currentDate.getTime() - startDate.getTime();
+
+const currentDay = timeDifference < 0 ? 1 : Math.floor(timeDifference / (1000 * 3600 * 24)) + 1;
 ---
 
 <MainLayout title="Acerca del reto">
@@ -19,7 +23,8 @@ const currentDay: number = 1;
 
     <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
       <h3 class="text-xl font-semibold mb-4 text-gray-700">Objetivos del Reto:</h3>
-      <ul class="min-[450px]:list-disc list-inside space-y-5 min-[450px]:space-y-3 text-gray-600">
+      <ul
+        class="min-[450px]:list-disc max-[450px]:text-sm text-base list-inside space-y-5 min-[450px]:space-y-3 text-gray-600">
         <li>Programar al menos 1 hora cada día</li>
         <li>Aprender una nueva tecnología o concepto cada semana</li>
         <li>Compartir mi progreso diariamente en este blog</li>
@@ -35,13 +40,8 @@ const currentDay: number = 1;
     <button
       id="compartir"
       class="flex items-center gap-2 mx-auto px-6 py-3 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-      <span>Comparte este reto</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 16 16">
-        <path
-          fill="currentColor"
-          d="M12 6a2 2 0 1 0-1.994-1.842L5.323 6.5a2 2 0 1 0 0 3l4.683 2.342a2 2 0 1 0 .67-1.342L5.995 8.158a2 2 0 0 0 0-.316L10.677 5.5c.353.311.816.5 1.323.5"
-        ></path>
-      </svg>
+      <span>Compartir</span>
+      <img src="/images/icons/share.svg" alt="icono de compartir" />
     </button>
   </div>
 </MainLayout>
