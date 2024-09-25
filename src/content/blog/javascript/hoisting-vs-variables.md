@@ -17,11 +17,11 @@ Las **variables** son espacios de almacenamiento que permiten contener datos que
 
 - **`var`**: Se utiliza para declarar variables que pueden ser redefinidas y son accesibles en el ámbito de la función o globalmente.
 
-- **`let`**: Introducido en ES6, permite declarar variables que tienen un ámbito de bloque, es decir, están disponibles solo dentro del bloque donde se declaran.
+- **`let`**: Introducido en **ES6+**, permite declarar variables que tienen un ámbito de bloque, es decir, están disponibles solo dentro del bloque donde se declaran.
 
-- **`const`**: También introducido en ES6, se utiliza para declarar constantes, es decir, variables cuyo valor no puede ser reasignado.
+- **`const`**: También introducido en **ES6+**, se utiliza para declarar constantes, es decir, variables cuyo valor no puede ser reasignado.
 
-## Hoisting vs Variables :
+## Hoisting vs Variables
 
 ### var: Hoisting y Comportamiento
 
@@ -33,7 +33,7 @@ var c = 30;
 console.log(c); // 30
 ```
 
-### let y const: Hoisting y la Zona Temporal Muerta (TDZ)
+### let y const: Hoisting y la Zona Temporal Muerta
 
 Por otro lado, `let` y `const` también son "hoisted", pero no están inicializados. Esto significa que no se puede acceder a la variable antes de que se ejecute su declaración, resultando en un error de referencia:
 
@@ -45,6 +45,13 @@ console.log(b); // ReferenceError: Cannot access 'b' before initialization
 const b = 20;
 ```
 
+La **Zona Temporal Muerta** es el período en el que una variable declarada con `let` o `const` no puede ser accedida antes de su declaración:
+
+```javascript
+console.log(z); // ReferenceError: Cannot access 'z' before initialization
+let z = 15;
+```
+
 ## Mejores Prácticas
 
 - Utiliza `let` y `const` en lugar de `var` para evitar problemas de ámbito y hoisting inesperado.
@@ -52,12 +59,3 @@ const b = 20;
 - Declara tus variables en el ámbito más limitado posible para mantener el código limpio y reducir errores.
 
 - Siempre inicializa tus variables en el momento de su declaración si es posible.
-
-## Dato Curioso
-
-El **Temporal Dead Zone (TDZ)** es el período en el que una variable declarada con `let` o `const` no puede ser accedida antes de su declaración:
-
-```javascript
-console.log(z); // ReferenceError: Cannot access 'z' before initialization
-let z = 15;
-```
