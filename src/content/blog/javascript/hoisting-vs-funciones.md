@@ -13,7 +13,7 @@ El **hoisting** es un comportamiento del intérprete de **JavaScript** en el que
 
 En JavaScript, una **función** es un bloque de código diseñado para realizar una tarea específica. Las funciones permiten organizar y reutilizar código, lo que las convierte en una de las herramientas más poderosas del lenguaje. Una función puede tomar entradas (parámetros), realizar operaciones con esos datos y devolver un resultado.
 
-## Hoisting vs Funciones :
+## Hoisting vs Funciones
 
 ### funciones declaradas
 
