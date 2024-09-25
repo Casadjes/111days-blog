@@ -11,33 +11,46 @@ interface Props {
 
 <div class="relative inline-block w-full sm:w-auto cursor-pointer rounded-2xl">
   <a href={`/articles/${article.slug}`}>
-    <img
-      src={`/images/${article.data.image}.avif`}
-      srcset={`
-    /images/${article.data.image}.avif 326w,  
-    /images/${article.data.image}.avif 576w,
-    /images/${article.data.image}.avif 704w,
-    /images/${article.data.image}.avif 470w
-    `}
-      sizes="
-    (max-width: 390px) 326px,
-    (max-width: 640px) 576px,
-    (max-width: 768px) 704px,
-    (max-width: 1024px) 470px,
-    598px
-    "
-      alt="imagen del articulo"
-      class="size-full object-cover object-center rounded-xl mb-6"
-      loading="eager"
-      decoding="async"
-      width="598"
-      height="360"
-    />
+    <picture>
+      <source
+        srcset={`/images/avif/${article.data.image}.avif`}
+        type="image/avif"
+        sizes="
+          (max-width: 390px) 326px,
+          (max-width: 640px) 576px,
+          (max-width: 768px) 704px,
+          (max-width: 1024px) 470px,
+          598px
+        "
+      />
+      <source
+        srcset={`/images/webp/${article.data.image}.webp`}
+        type="image/webp"
+        sizes="
+          (max-width: 390px) 326px,
+          (max-width: 640px) 576px,
+          (max-width: 768px) 704px,
+          (max-width: 1024px) 470px,
+          598px
+        "
+      />
+      <img
+        src={`/images/webp/${article.data.image}.webp`}
+        alt="Imagen del artículo"
+        class="size-full object-cover object-center rounded-xl mb-6"
+        loading="lazy"
+        decoding="async"
+        width="598"
+        height="360"
+      />
+    </picture>
 
     <div
       class="absolute p-5 inset-0 flex flex-col items-center justify-center bg-black opacity-80 hover:opacity-70 transition duration-300 ease-in-out text-white text-center rounded-2xl">
       <div>
-        <h2 class="text-lg min-[450px]:text-2xl font-semibold sm:text-3xl">{article.data.title}</h2>
+        <h2 class="text-lg min-[450px]:text-2xl font-semibold sm:text-3xl">
+          {article.data.title}
+        </h2>
         <p class="text-base min-[450px]:text-xl max-[450px]:mt-2 mt-4">
           {formatDate(article.data.pubDate)}
         </p>
