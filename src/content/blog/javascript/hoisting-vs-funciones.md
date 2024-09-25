@@ -15,7 +15,7 @@ En JavaScript, una **función** es un bloque de código diseñado para realizar 
 
 ## Hoisting vs Funciones
 
-### funciones declaradas
+### Funciones Feclaradas
 
 **Definición**: Las funciones declaradas son aquellas que se definen con la sintaxis clásica usando la palabra clave `function`.
 
@@ -32,7 +32,7 @@ function saludar() {
 
 En este ejemplo, la función `saludar` es llamada antes de su declaración en el código, pero gracias al hoisting, JavaScript mueve la declaración de la función al inicio del contexto de ejecución, permitiendo que la función funcione correctamente.
 
-### funciones flecha
+### Funciones Flecha
 
 **Definición**: Las funciones flecha son una sintaxis más concisa para escribir funciones, introducida en **ES6+**. Generalmente, se asignan a una variable.
 
