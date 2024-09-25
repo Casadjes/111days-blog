@@ -22,7 +22,6 @@ const allBlogArticles: CollectionEntry<"blog">[] = (await getCollection("blog"))
 
 // filter
 const tagArticles = allBlogArticles.filter((article) => article.data.tags.includes(tag));
-console.log(4 / 6);
 
 // Calculate the total number of pages based on the filtered articles (tagArticles).
 // If there are no articles, set totalPages to 1 to avoid showing extra pagination.

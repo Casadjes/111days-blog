@@ -3,7 +3,7 @@ title: "Entendiendo Variables y Hoisting en JavaScript"
 pubDate: 2024-09-24
 author: "Jesús Casado"
 image: "javascript"
-tags: ["javascript", "ES6"]
+tags: ["javascript", "ES6+"]
 slug: entendiendo-variables-y-hoisting-en-javascript
 ---
 
