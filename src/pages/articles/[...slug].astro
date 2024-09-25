@@ -35,28 +35,39 @@ const { Content } = await entry.render();
     <div class="flex flex-wrap gap-2 mb-6">
       <Tags tags={entry.data.tags} />
     </div>
-    <img
-      src={`/images/${entry.data.image}.avif`}
-      srcset={`
-    /images/${entry.data.image}.avif 326w,  
-    /images/${entry.data.image}.avif 576w,
-    /images/${entry.data.image}.avif 704w,
-    /images/${entry.data.image}.avif 768w
-    `}
-      sizes="
+    <picture>
+      <source
+        srcset={`/images/avif/${entry.data.image}.avif`}
+        type="image/avif"
+        sizes="
       (max-width: 390px) 326w, 
       (max-width: 640px) 576px,
       (max-width: 768px) 704px,
       (max-width: 1024px) 768px,
       768px
       "
-      alt="imagen del articulo"
-      class="w-full h-auto rounded-xl mb-6"
-      loading="eager"
-      decoding="async"
-      width="768"
-      height="432"
-    />
+      />
+      <source
+        srcset={`/images/webp/${entry.data.image}.webp`}
+        type="image/webp"
+        sizes="
+      (max-width: 390px) 326w, 
+      (max-width: 640px) 576px,
+      (max-width: 768px) 704px,
+      (max-width: 1024px) 768px,
+      768px
+      "
+      />
+      <img
+        src={`/images/webp/${entry.data.image}.webp`}
+        alt="imagen del articulo"
+        class="size-full object-cover object-center rounded-xl mb-6"
+        loading="lazy"
+        decoding="async"
+        width="768"
+        height="432"
+      />
+    </picture>
 
     <ArticleLayout>
       <Content />
