@@ -13,15 +13,20 @@ interface Props {
 <div class="max-w-80 mx-auto mt-10">
   <div class="h-full bg-white rounded-lg overflow-hidden shadow-lg">
     <a href={`/articles/${article.slug}`}>
-      <img
-        src={`/images/${article.data.image}.avif`}
-        alt="imagen del articulo"
-        class="w-full h-48 object-cover hover:opacity-75 transition duration-300 ease-in-out"
-        decoding="async"
-        loading="eager"
-        width="340"
-        height="192"
-      />
+      <picture>
+        <source srcset={`/images/avif/${article.data.image}.avif`} type="image/avif" />
+        <source srcset={`/images/webp/${article.data.image}.webp`} type="image/webp" />
+        <img
+          src={`/images/${article.data.image}.webp`}
+          alt="imagen del artículo"
+          class="w-full h-48 object-cover hover:opacity-75 transition duration-300
+        ease-in-out"
+          decoding="async"
+          loading="lazy"
+          width="340"
+          height="192"
+        />
+      </picture>
     </a>
     <div class="flex flex-col justify-between w-full min-h-44 p-6">
       <div>
