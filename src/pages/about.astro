@@ -1,22 +1,7 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import Button from "@/components/Button.astro";
-
-const startDate = new Date("2024-09-25T00:00:00"); // Aseguramos que la hora sea a las 00:00:00
-const currentDate = new Date();
-
-// Establecer la fecha a solo año, mes y día
-const startDateOnly = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
-const currentDateOnly = new Date(
-  currentDate.getFullYear(),
-  currentDate.getMonth(),
-  currentDate.getDate()
-);
-
-const timeDifference = currentDateOnly.getTime() - startDateOnly.getTime();
-
-// Calcular los días transcurridos
-const currentDay = timeDifference < 0 ? 1 : Math.floor(timeDifference / (1000 * 3600 * 24)) + 1;
+const currentDay = 4;
 ---
 
 <MainLayout title="Acerca del reto">
