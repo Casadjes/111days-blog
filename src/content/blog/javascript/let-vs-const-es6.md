@@ -7,6 +7,8 @@ tags: ["javascript", "ES6+"]
 slug: entendiendo-let-y-const-en-es6+
 ---
 
+En JavaScript, la introducción de **ES6** trajo nuevas formas de declarar variables a través de `let` y `const`, mejorando la flexibilidad y seguridad del código. A diferencia de `var`, que se utilizaba en versiones anteriores, `let` y `const` ofrecen un mejor control sobre el alcance (_scope_) de las variables, lo que reduce errores comunes relacionados con el hoisting y el alcance global.
+
 ## let
 
 - **Mutabilidad**: Las variables declaradas con `let` pueden cambiar su valor.
