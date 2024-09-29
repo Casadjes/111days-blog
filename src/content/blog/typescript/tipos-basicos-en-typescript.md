@@ -60,7 +60,7 @@ let numbers: number[] = [1, 2, 3, 4, 5]; // Un array de números
 let fruits: Array<string> = ["apple", "banana", "cherry"]; // Un array de strings
 ```
 
-> Támbien puedes usar **`string[]`** para tipar la variable, solo queria mostrar otra forma de hacerlo.
+> Támbien puedes usar **`string[]`** para tipar la variable `fruits`, solo queria mostrar otra forma de hacerlo.
 
 6. ### tuple
 
