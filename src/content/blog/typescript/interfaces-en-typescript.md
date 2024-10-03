@@ -4,7 +4,7 @@ pubDate: 2024-09-29
 author: "Jesús Casado"
 image: "typescript"
 tags: ["typescript"]
-slug: entiende-las-interfaces-en-typesript-y-mejora-tu-desarrollo
+slug: interfaces-en-typescript-que-son-y-por-que-usarlas
 ---
 
 En TypeScript, una **interface** es una forma de definir la estructura que debe seguir un objeto. Permiten declarar cómo deben ser los objetos, clases o funciones, lo que ayuda a tener un código más claro, mantenible y que permite detectar errores de forma temprana en tiempo de desarrollo.
