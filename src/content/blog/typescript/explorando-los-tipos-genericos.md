@@ -141,11 +141,11 @@ veamos:
 
 - `stringResponse` es de tipo `Result<string>`.
 
-- **TypeScript** infiere que el tipo genérico `T` en `handleResponse<T>` es `string`.
+- TypeScript infiere que el tipo genérico `T` en `handleResponse<T>` es `string`.
 
 - Por lo tanto, para esta llamada específica, la función es tratada como `handleResponse<string>`.
 
-#### `response: Result <T>` **es un objeto**
+**`response: Result <T>` es un objeto**
 
 ```typescript
 function handleResponse<T>(response: Result<T>): T | string {
@@ -172,9 +172,9 @@ return response.error ?? "Unknown error";
 
 **Compruebas las propiedades:**
 
-- response.success: Verificas si la operación fue exitosa.
+- `response.success`: Verificas si la operación fue exitosa.
 
-- response.value !== undefined: Te aseguras de que haya un valor disponible.
+- `response.value !== undefined`: Te aseguras de que haya un valor disponible.
 
 **Devuelves un valor del mismo tipo que** `T`:
 
