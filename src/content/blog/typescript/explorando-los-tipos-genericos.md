@@ -1,10 +1,10 @@
 ---
-title: "Explorando los tipos genericos en Typescript"
+title: "Explorando los tipos Genéricos: Introducción"
 pubDate: 2024-10-03
 author: "Jesús Casado"
 image: "typescript"
 tags: ["typescript"]
-slug: explorando-los-tipos-genericos-en-typescript
+slug: explorando-los-tipos-genericos-introduccion
 ---
 
 Los **genéricos** en TypeScript son una característica poderosa que permite escribir funciones, clases, y tipos que trabajan de manera flexible con diferentes tipos, manteniendo la seguridad del tipo.
@@ -195,3 +195,7 @@ function handleResponse<T>(response: Result<T>): T | string;
 - Cuando `T` es `string`, el tipo de retorno es `string | string`, que sigue siendo `string`.
 
 - Si hubiéramos tenido `T` como otro tipo (por ejemplo, `number`), el retorno sería `number | string`.
+
+---
+
+Los **genéricos** son una herramienta increíblemente útil para crear componentes reutilizables que trabajan con cualquier tipo de dato, manteniendo al mismo tiempo la seguridad de tipos que TypeScript proporciona. Su versatilidad te permite escribir código más flexible y generalizado, sin perder el control sobre qué tipos se utilizan y cómo se comportan tus funciones o clases.
