@@ -26,9 +26,9 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/astro/comp
       --- -->
       <div class="flex items-center">
         <SignedOut>
-          <div class="bg-blue-500 px-3 py-1 rounded-lg">
-            <SignInButton mode="modal">Iniciar sesión</SignInButton>
-          </div>
+          <SignInButton mode="modal" asChild>
+            <button class="bg-blue-500 px-3 py-1 rounded-lg">Iniciar sesión</button>
+          </SignInButton>
         </SignedOut>
         <SignedIn>
           <UserButton />

@@ -3,10 +3,16 @@ import { defineConfig } from "astro/config";
 import clerk from "@clerk/astro";
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
+import { esES } from "@clerk/localizations";
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), clerk()],
+  integrations: [
+    tailwind(),
+    clerk({
+      localization: esES,
+    }),
+  ],
+
   adapter: vercel(),
   output: "server",
 
